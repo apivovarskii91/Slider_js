@@ -1,0 +1,18 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.header-content {
+display: flex;
+justify-content: space-between;
+background-color: $color-dark;
+color: $color-light;
+padding: 5px 0;
+@extend %container;
+
+
+@include md {
+ display: block;
+ text-align: center;
+}
+}
+

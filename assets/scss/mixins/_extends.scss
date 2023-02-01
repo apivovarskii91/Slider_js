@@ -1,0 +1,8 @@
+@use "../presets/" as*;
+@use"mixins" as*;
+@use"mixins-media" as *;
+
+%container {
+  width: min(100% - $gap * 2, $container);
+  margin-inline: auto;
+}

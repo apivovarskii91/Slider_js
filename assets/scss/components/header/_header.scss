@@ -1,0 +1,6 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.header {
+  background-color: $color-dark;
+}

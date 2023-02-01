@@ -1,0 +1,16 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.header-menu {
+
+background-color: $color-light;
+
+  &__container {
+    display: grid;
+    align-items: center;
+
+    @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+  }
+}

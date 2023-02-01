@@ -1,0 +1,57 @@
+@use "../../presets/index" as*;
+@use "../../mixins/index" as*;
+
+.footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__soc {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+
+    &::after {
+      position: absolute;
+      bottom: 70px;
+    
+
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: $color-dark;
+    }
+
+    a {
+      display: block;
+      color: $color-dark;
+      padding: 10px;
+      transition: color 0.5s;
+      &:hover,
+      :focus {
+        color: gray;
+      }
+    }
+
+    .fab {
+      display: block;
+      border-radius: 15px;
+      font-size: 36px;
+    }
+  }
+
+  &__copy {
+    span {
+        margin-right: -0.5em;
+        letter-spacing: 0.33em;
+        font-weight: 100;
+    }
+  }
+}
