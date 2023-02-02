@@ -396,10 +396,6 @@ h2 {
   background-size: cover;
 }
 
-.carousel {
-  margin: 50px;
-}
-
 .indicators,
 .controls {
   display: -webkit-box;
@@ -554,7 +550,7 @@ h2 {
   }
   .header-navbar__list {
     position: absolute;
-    top: 100%;
+    top: -150px;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
