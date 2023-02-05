@@ -359,12 +359,6 @@ h2 {
 
   font-size: 40px;
 }
-
-.active {
-  z-index: 0;
-
-  opacity: 1;
-}
 .slide:nth-of-type(1) {
   background: url(/assets/img/1643233064_1-phonoteka-org-p-fon-dlya-magazina-obuvi-1.jpg);
   background-repeat: no-repeat;
@@ -396,7 +390,44 @@ h2 {
   background-size: cover;
 }
 
-.indicators,
+.active {
+  z-index: 0;
+
+  opacity: 1;
+}
+
+.indicators {
+  position: absolute;
+  z-index: 2;
+  bottom: -150px;
+  left: 50%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  padding: 1em;
+
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+
+  gap: 20px;
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.indicator.active {
+  border-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px #ffffff;
+          box-shadow: 0 0 10px #ffffff;
+}
+
 .controls {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,7 +446,6 @@ h2 {
   gap: 20px;
 }
 
-.indicator,
 .control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,20 +463,14 @@ h2 {
 
   cursor: pointer;
 
-  border: 1px solid gray;
+  border: 1px solid #808080;
   border-radius: 7px;
 
   font-size: 20px;
 }
-.indicator:hover,
 .control:hover {
-  color: white;
-  background-color: rgb(29, 28, 28);
-}
-
-.indicator.active {
   color: #ffffff;
-  background-color: red;
+  background-color: #000000;
 }
 
 .footer {
@@ -551,6 +575,9 @@ h2 {
   .header-navbar__list {
     position: absolute;
     top: -150px;
+  }
+  .indicators {
+    bottom: -186px;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {

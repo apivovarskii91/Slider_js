@@ -1,0 +1,29 @@
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: $gap;
+  user-select: none;
+  margin-bottom: $gap;
+
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius: 7px;
+  border: 1px solid $color-grey;
+  height: $gap-x2;
+  min-width: $gap-x2;
+  cursor: pointer;
+  font-size: $gap;
+
+  &:hover{
+  background-color: $color-dark;
+  color: $color-light;
+}
+}
