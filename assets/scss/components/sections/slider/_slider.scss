@@ -4,6 +4,7 @@
 
 .slide-container{
   @extend %container;
+  position: relative;
 }
 
 .slides {

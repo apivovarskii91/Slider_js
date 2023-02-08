@@ -334,6 +334,10 @@ h2 {
   background-color: #000000;
 }
 
+.slide-container {
+  position: relative;
+}
+
 .slides {
   position: relative;
 
@@ -399,7 +403,7 @@ h2 {
 .indicators {
   position: absolute;
   z-index: 2;
-  bottom: -150px;
+  bottom: 25px;
   left: 50%;
 
   display: -webkit-box;
@@ -447,30 +451,56 @@ h2 {
 }
 
 .control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  position: absolute;
+  z-index: 2;
 
   min-width: 40px;
   height: 40px;
-  padding: 0.5em;
 
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
 
-  border: 1px solid #808080;
-  border-radius: 7px;
-
-  font-size: 20px;
+  color: rgba(255, 255, 255, 0.2);
 }
-.control:hover {
+.control.prev {
+  top: 50%;
+  left: 0;
+
+  padding-left: 50px;
+
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+
+  font-size: 3rem;
+}
+.control.next {
+  top: 50%;
+  right: 0;
+
+  padding-right: 50px;
+
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+
+  font-size: 3rem;
+}
+.control.pause {
+  top: 50%;
+
+  color: transparent;
+}
+.control.prev:hover,
+.control.next:hover {
   color: #ffffff;
-  background-color: #000000;
+  text-shadow: 0 0 10px #ffffff;
 }
 
 .footer {
@@ -575,9 +605,6 @@ h2 {
   .header-navbar__list {
     position: absolute;
     top: -150px;
-  }
-  .indicators {
-    bottom: -186px;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {

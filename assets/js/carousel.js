@@ -21,9 +21,9 @@ _initProps(){
 
 _initControls (){
 const controls = document.createElement('div');
-const PAUSE = ` <div class="control control-pause" id="pause-btn">${this.FA_PAUSE}</div>`
-const PREV = ` <div class="control control-prev" id="prev-btn">${this.FA_PREV}</div>`
-const NEXT = `  <div class="control control-next" id="next-btn">${this.FA_NEXT}</div>`
+const PAUSE = ` <div class="control pause" id="pause-btn">${this.FA_PAUSE}</div>`
+const PREV = ` <div class="control prev" id="prev-btn">${this.FA_PREV}</div>`
+const NEXT = `  <div class="control next" id="next-btn">${this.FA_NEXT}</div>`
 
 controls.setAttribute('class', 'controls');
 controls.innerHTML = PAUSE + PREV + NEXT;
