@@ -16,7 +16,7 @@
   min-width: $gap-x2;
   cursor: pointer;
   user-select: none;
-  color: #ffffff33;
+  color: $color-grey;
   transition: 0.5s;  
 
   &.prev{

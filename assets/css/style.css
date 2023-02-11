@@ -255,7 +255,7 @@ h2 {
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 
-  background-color: black;
+  background-color: #000000;
 }
 .header-navbar__btn-row:nth-child(even) {
   left: 50%;
@@ -327,7 +327,7 @@ h2 {
        -o-transition: 0.25s ease-in-out;
           transition: 0.25s ease-in-out;
 
-  color: gray;
+  color: #808080;
 }
 
 .header {
@@ -364,31 +364,31 @@ h2 {
   font-size: 40px;
 }
 .slide:nth-of-type(1) {
-  background: url(/assets/img/1643233064_1-phonoteka-org-p-fon-dlya-magazina-obuvi-1.jpg);
+  background: url(/assets/img/image1.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 .slide:nth-of-type(2) {
-  background: url(/assets/img/1653662229_1-celes-club-p-fon-dlya-reklami-obuvi-krasivie-1.jpg);
+  background: url(/assets/img/image2.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 .slide:nth-of-type(3) {
-  background: url(/assets/img/slide-5.jpg);
+  background: url(/assets/img/image3.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 .slide:nth-of-type(4) {
-  background: url(/assets/img/image3.png);
+  background: url(/assets/img/image4.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 .slide:nth-of-type(5) {
-  background: url(/assets/img/1669445956_3-22.jpg);
+  background: url(/assets/img/image5.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -466,7 +466,7 @@ h2 {
        -o-transition: 0.5s;
           transition: 0.5s;
 
-  color: rgba(255, 255, 255, 0.2);
+  color: #808080;
 }
 .control.prev {
   top: 50%;

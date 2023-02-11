@@ -5,7 +5,7 @@
   &__btn {
     position: relative;
 
-    width: 30px;
+    width: $gap-lg;
     height: 23px;
     margin-left: auto;
 
@@ -19,7 +19,7 @@
       height: 4px;
       transition: 0.25s ease-in-out;
       transform: rotate(0deg);
-      background-color: black;
+      background-color: $color-dark;
 
       &:nth-child(even) {
         left: 50%;
@@ -95,7 +95,7 @@
       display: grid;
       justify-content: end;
 
-      gap: 20px;
+      gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 (-10px) 0 0);
     }
@@ -106,11 +106,11 @@
   }
 
   &__item {
-    font-size: 20px;
+    font-size: $gap;
 
 &:hover,
 &:focus{
-  color: gray;
+  color: $color-grey;
   transition: 0.25s ease-in-out;
   cursor: pointer;
 }
