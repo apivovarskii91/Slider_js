@@ -23,10 +23,7 @@ class Carousel {
   
   _initControls (){
   const controls = document.createElement('div');
-  const PAUSE = ` <div class="control pause" id="pause-btn">
-                     <span id="fa-pause-icon">${this.FA_PAUSE}</span>
-                     <span id="fa-play-icon">${this.FA_PLAY}</span>
-  </div>`
+  const PAUSE = ` <div class="control pause" id="pause-btn">${this.FA_PAUSE}</div>`
   const PREV = ` <div class="control prev" id="prev-btn">${this.FA_PREV}</div>`
   const NEXT = `  <div class="control next" id="next-btn">${this.FA_NEXT}</div>`
   
