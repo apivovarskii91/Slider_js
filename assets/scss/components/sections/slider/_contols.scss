@@ -35,13 +35,18 @@
     font-size: 3rem;
   }
   &.pause{
-    top: 50%;
-    color: transparent;
+    top: 36%;
+    color: $color-grey;
+    font-size: 20vh;
+    opacity: 0;
   }
 &.prev:hover,
-&.next:hover{
+&.next:hover {
   color: $color-light;
   text-shadow: 0 0 $gap-sm $color-light;
+}
+&.pause:hover {
+  opacity: .6;
 }
 }
 

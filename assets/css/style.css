@@ -341,7 +341,7 @@ h2 {
 .slides {
   position: relative;
 
-  height: 100vh;
+  height: 70vh;
   margin: 20px;
   padding: 0;
 
@@ -465,14 +465,20 @@ h2 {
   font-size: 3rem;
 }
 .control.pause {
-  top: 50%;
+  top: 36%;
 
-  color: transparent;
+  opacity: 0;
+  color: #808080;
+
+  font-size: 20vh;
 }
 .control.prev:hover,
 .control.next:hover {
   color: #ffffff;
   text-shadow: 0 0 10px #ffffff;
+}
+.control.pause:hover {
+  opacity: 0.6;
 }
 
 .footer {
