@@ -23,7 +23,10 @@ class Carousel {
   
   _initControls (){
   const controls = document.createElement('div');
-  const PAUSE = ` <div class="control pause" id="pause-btn">${this.FA_PAUSE}</div>`
+  const PAUSE = ` <div class="control pause" id="pause-btn">
+                      <span id="fa-pause-icon">${this.FA_PAUSE}</span>
+                      <span id="fa-play-icon">${this.FA_PLAY}</span>
+                  </div>`
   const PREV = ` <div class="control prev" id="prev-btn">${this.FA_PREV}</div>`
   const NEXT = `  <div class="control next" id="next-btn">${this.FA_NEXT}</div>`
   
@@ -35,6 +38,10 @@ class Carousel {
   this.pauseBtn = this.container.querySelector('#pause-btn');
   this.prevBtn = this.container.querySelector('#prev-btn');
   this.nextBtn = this.container.querySelector('#next-btn');
+
+  this.pauseIcon = this.container.querySelector('#fa-pause-icon')
+  this.playIcon = this.container.querySelector('#fa-play-icon')
+  this.isPlaying ? this._pauseVisible() : this._playVisible()
   }
   
   _initIndicators (){
@@ -62,6 +69,8 @@ class Carousel {
       this.prevBtn.addEventListener('click', this.prev.bind(this));
       this.nextBtn.addEventListener('click', this.next.bind(this));
       this.indicatorsContainer.addEventListener('click', this._indicate.bind(this));
+      this.container.addEventListener('mouseenter', this._pause.bind(this));
+      this.container.addEventListener('mouseleave', this._play.bind(this));
     }
   
       _gotoNth(n) {
@@ -81,15 +90,17 @@ class Carousel {
   
        _pause() {
       if (this.isPlaying) {
-        this.pauseBtn.innerHTML = this.FA_PLAY;
+       this._playVisible()
         this.isPlaying = false;
         clearInterval(this.timerID);
       }
     }
      _play() {
-      this.pauseBtn.innerHTML = this.FA_PAUSE;
-      this.isPlaying = true;
-      this._tick();
+      if(!this.isPlaying){
+        this._pauseVisible()
+         this.isPlaying = true;
+         this._tick();
+      }
     }
   
      _indicate(e) {
@@ -109,6 +120,14 @@ class Carousel {
     _tick(flag= true){
       if(!flag) return;
       this.timerID = setInterval(()=>this._gotoNext(), this.interval);
+    }
+
+    _pauseVisible(isVisible = true){
+this.pauseIcon.style.opacity = isVisible ? 1: 0;
+this.playIcon.style.opacity = !isVisible ? 1: 0;
+    }
+    _playVisible(){
+      this._pauseVisible(false);
     }
 
     pausePlay() {

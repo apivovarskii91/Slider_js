@@ -19,6 +19,12 @@
   color: $color-grey;
   transition: 0.5s;  
 
+&>span {
+  position: absolute;
+  opacity: 0;
+  left: -50px;
+}
+
   &.prev{
     top: 50%;
     left: 0px;
